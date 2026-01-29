@@ -4,8 +4,8 @@
 
 **1. Environment Basics**
 
-- uname -a
-- cat /etc/os-release
+- ```uname -a```
+- ```cat /etc/os-release```
 
 Observation:
 - Confirmed Linux kernel version and Ubuntu distribution
@@ -15,11 +15,11 @@ Observation:
 
 **2. Process & CPU / Memory Snapshot**
 
-- pgrep -l nginx
-- ps -o pid,pcpu,pmem,comm -p <pids>
-- free -h
-- df -h
-- vmstat 1 5
+- ```pgrep -l nginx```
+- ```ps -o pid,pcpu,pmem,comm -p <pids>```
+- ```free -h```
+- ```df -h```
+- ```vmstat 1 5```
 
 Observation:
 - nginx master and worker processes running
@@ -30,9 +30,9 @@ Observation:
 
 **3. Disks & I/O checks**
 
-- df -h
-- du -sh /var/log/nginx
-- iostat
+- ```df -h```
+- ```du -sh /var/log/nginx```
+- ```iostat```
 
 Observation:
 - Root filesystem has sufficient free space
@@ -45,9 +45,9 @@ Observation:
 
 **4. Network**
 
-- ss -tulpn | grep nginx
-- ss -tulpn
-- curl -I http://publicip:80
+- ```ss -tulpn | grep nginx```
+- ```ss -tulpn```
+- ```curl -I http://publicip:80```
 
 Observation:
 - nginx listening on port 80
@@ -59,8 +59,8 @@ Observation:
 
 **5. Log Inspection**
 
-- tail -n 50 /var/log/nginx/access.log
-- journalctl -u nginx
+- ```tail -n 50 /var/log/nginx/access.log```
+- ```journalctl -u nginx```
 
 Observation:
 - No recent errors or warnings
