@@ -8,8 +8,8 @@
 - cat /etc/os-release
 
 Observation:
-Confirmed Linux kernel version and Ubuntu distribution
-Ensured OS compatibility for systemd and nginx
+- Confirmed Linux kernel version and Ubuntu distribution
+- Ensured OS compatibility for systemd and nginx
 
 ![Environment Basics](images/env_basics.png)
 
@@ -22,9 +22,9 @@ Ensured OS compatibility for systemd and nginx
 - vmstat 1 5
 
 Observation:
-nginx master and worker processes running
-CPU usage stable, no abnormal spikes
-Memory utilization within safe limits
+- nginx master and worker processes running
+- CPU usage stable, no abnormal spikes
+- Memory utilization within safe limits
 
 ![Process](images/2.png)
 
@@ -35,8 +35,8 @@ Memory utilization within safe limits
 - iostat
 
 Observation:
-Root filesystem has sufficient free space
-Log directory size under control
+- Root filesystem has sufficient free space
+- Log directory size under control
 
 
 ![Disk](images/3.png)
@@ -50,8 +50,8 @@ Log directory size under control
 - curl -I http://publicip:80
 
 Observation:
-nginx listening on port 80
-HTTP 200 response confirms service availability
+- nginx listening on port 80
+- HTTP 200 response confirms service availability
 
 ![sstulpn](images/4.png)
 
@@ -63,8 +63,8 @@ HTTP 200 response confirms service availability
 - journalctl -u nginx
 
 Observation:
-No recent errors or warnings
-Service started cleanly without crashes
+- No recent errors or warnings
+- Service started cleanly without crashes
 
 ![tail](images/5.png)
 
